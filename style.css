@@ -1,0 +1,618 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200, 300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  background: #fff;
+}
+
+/* Home page */
+main .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 40px;
+}
+main p{
+  font-size: x-large;
+}
+main h1{
+  font-size: 40px;
+  margin-top: 25px; 
+  letter-spacing: 5px;
+  color: #999;
+  font-family: 'Roboto';
+  font-weight:bold;
+  text-align: center;
+}
+.box1, .box2, .box3, .box4,.box5 {
+  width: 500px;
+  height: 250px;
+  margin: 10px 30px;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+.box1 {
+  background-color: #97ff7d; 
+}
+
+.box1:hover {
+  background-color: #6af04c;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.box2 {
+  background-color: #d77ffa;
+}
+.box2:hover {
+  background-color: #ca44f6;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.box3 {
+  background-color: #a7dbeb;
+}
+.box3:hover{
+  background-color: #45bbff;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.box4 {
+  background-color: #def88f;
+}
+.box4:hover {
+  background-color: #e2ff61;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.box5 {
+  background-color: #f7acf1; 
+}
+.box5:hover{
+  background-color: #e876e6;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.imageHome {
+  text-align: center;
+}
+
+.imageHome img {
+  margin-bottom: 10px;
+}
+
+
+
+.navigation{
+  position: fixed;
+  inset: 0;
+  width: 75px;
+  background: #dedcd8;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.navigation.open{
+  width: 250px;
+}
+
+.navigation .menuToggle{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  border-bottom: 1px solid rgba(0,0,0,0.25);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 23px;
+}
+
+
+.navigation .menuToggle::before{
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background: #333;
+  transform: translateY(-8px);
+  transition: 0.5s;
+}
+.navigation.open .menuToggle::before{
+  transform: translateY(0px) rotate(45deg);
+}
+
+.navigation .menuToggle::after{
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background: #333;
+  transform: translateY(-8px);
+  transition: 0.5s;
+  box-shadow: 0 -8px 0 #333;
+}
+.navigation.open .menuToggle::after{
+  transform: translateY(0px) rotate(-45deg);
+  box-shadow: 0 0 0 #333;
+}
+
+.navigation ul{
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+  width:100%;
+}
+.navigation ul li:hover{
+  transform: scale(1.2);
+}
+
+.navigation ul li{
+  list-style: none;
+  position: relative;
+  width: 100%;
+  height: 60px;
+  padding: 0 10px;
+  transition: 0.5s;
+}
+
+.navigation ul li a{
+  position: relative;
+  display:flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.navigation ul li .profile{
+  position: relative;
+  display:flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 200px;
+  text-align: center;
+  text-decoration: none;
+
+}
+.navigation ul li .icon{
+  position: relative;
+  display: block;
+  min-width: 55px;
+  height: 55px;
+  line-height: 60px;
+  transition: 0.5s;
+  border-radius: 10px;
+  font-size: 1.75em;
+  color: #222;
+}
+
+.navigation ul li.active .icon{
+  background: var(--c-nav);
+}
+
+
+.navigation ul li .icon::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--c-nav);
+  border-radius: 10px;
+  transition: 0.5s;
+}
+.navigation ul li .profile::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: none;
+  border-radius: 10px;
+  transition: 0.5s;
+  
+}
+.navigation.open ul li .profile{
+
+    background: var(--c-nav);
+    border-radius: 10px;
+  }
+
+
+
+
+
+.navigation ul li a .text{
+  position: relative;
+  padding: 0 20px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  color: #333;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+}
+
+.navigation.open ul li a .text{
+  opacity: 1;
+  visibility: visible;
+}
+.navigation ul li .profile .text{
+  position: relative;
+  padding: 0 20px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+}
+
+.navigation.open ul li .profile .text{
+  opacity: 1;
+  visibility: visible;
+}
+/* content */
+main{
+  margin-left: 200px;
+}
+.studentList{
+  display: flex;
+  margin-left: 4rem;
+  flex-direction: column;
+}
+#searchInput{
+  width: 50%;
+  min-width: 200px;
+  margin: 50px auto;
+  border-radius: 20px;
+}
+
+#studentsTableContainer table {
+  margin: 20px auto;
+  width: 100%;
+  max-width: 75%;
+  overflow-x: auto;
+  border-collapse: collapse;
+}
+
+#studentsTableContainer th, #studentsTableContainer td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+#studentsTableContainer th {
+  background-color: #f2f2f2;
+}
+
+
+#studentsTableContainer tr:hover {
+  background-color: #b4afa9;
+}
+
+#studentsTableContainer .actionsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+}
+#studentsTableContainer .updateButton{
+  margin: 0 2px;
+  border-radius: 5px;
+  background-color: #0bee3c; 
+}
+
+#studentsTableContainer .removeButton{
+  margin: 0 2px;
+  border-radius: 5px;
+  background-color: #ff0000; 
+}
+#studentsTableContainer .updateButton:hover,
+#studentsTableContainer .removeButton:hover {
+  transform: scale(1.1);
+}
+
+
+
+/* courses list */
+.coursesList{
+  display: flex;
+  margin-left: 4rem;
+  flex-direction: column;
+}
+#coursesTableContainer table {
+  margin: 20px auto;
+  width: 100%;
+  max-width: 75%;
+  overflow-x: auto;
+  border-collapse: collapse;
+}
+
+#coursesTableContainer th, #coursesTableContainer td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+#coursesTableContainer th {
+  background-color: #f2f2f2;
+}
+
+
+#coursesTableContainer tr:hover {
+  background-color: #b4afa9;
+}
+
+#coursesTableContainer .actionsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+}
+#coursesTableContainer .updateButton{
+  margin: 0 5px;
+  border-radius: 5px;
+  background-color: #0bee3c; 
+}
+
+#coursesTableContainer .removeButton{
+  margin: 0 5px;
+  border-radius: 5px;
+  background-color: #ff0000; 
+}
+#coursesTableContainer .updateButton:hover,
+#coursesTableContainer .removeButton:hover {
+  transform: scale(1.1); 
+}
+
+
+
+/* add course */
+.addCoursePage{
+  width: 60%;
+  margin:20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+@media (max-width:485px) {
+  .addCoursePage{
+    width: 40%;
+    min-width: 150px;
+    margin:20px auto;
+    margin-right: 50px;
+    margin-left: 100px;
+  }
+}
+.addCoursePage hr{
+  margin-top: 20px;
+  background: #222;
+  height: 3px;
+  width: 100%;
+}
+.addCoursePage h2{
+  text-align: center;
+  padding-top: 20px;
+  letter-spacing: 2px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input, button {
+  padding: 10px;
+  font-size: 14px;
+}
+
+button {
+  cursor: pointer;
+  background-color: #333;
+  color: #fff;
+  border: none;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+.list-group {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.list-group-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f2f2f2;
+  margin-bottom: 10px;
+}
+
+.delete-item {
+  color: red;
+  cursor: pointer;
+}
+
+/* Passed and Faied Students */
+
+#courseDetailForm{
+  margin: 50px auto;
+  width:50%;
+}
+#studentDetailForm{
+  margin: 50px auto;
+  width:50%;
+}
+
+
+/* select option */
+select{
+  height: 40px;
+}
+
+#studentGpaButton{
+  width: 25%;
+  min-width: 200px;
+  margin: 10px auto;
+  border-radius: 10px;
+  background-color: #595954;
+}
+#studentGpaButton:hover{
+  background-color: #222;
+  color: #fff;
+  transform: scale(1.1);
+}
+#studentsGpaTable table{
+  margin: 150px auto;
+  margin-top: 50px;
+  width: 100%;
+  max-width: 75%;
+  overflow-x: auto;
+  border-collapse: collapse;
+}
+
+
+#studentsGpaTable th, #studentsGpaTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+#studentsGpaTable th {
+  background-color: #f2f2f2;
+}
+
+
+#studentsGpaTable tr:hover {
+  background-color: #b4afa9;
+}
+
+
+#gpaTableTitle{
+  text-align: center;
+  margin-top: 100px;
+  font-weight: bold;
+  color: #343433;
+}
+
+/* Result table */
+#selectCourseSelect{
+  margin: 70px auto 10px auto;
+  box-shadow: 0 0 20px #35342d;
+  width: 50%;
+
+}
+.resultTables{
+  width: 80%;
+  padding-bottom: 175px;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between ;
+
+}
+@media (max-width:1104px) {
+  .resultTables{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between ;
+  }
+}
+.resultTables h2 {
+  text-align: center;
+  margin: 10px;
+  font-family: 'Roboto';
+  letter-spacing: 2px;
+}
+.passedTable1,.faiedTable1{
+  width: 100%;
+}
+#passedTable h2, #failedTable h2 {
+  text-align: center;
+  text-shadow: 2px 2px 5px rgb(81, 76, 68);
+}
+
+#passedStudentsTableContainer table, #failedStudentsTableContainer table{
+  margin: 0 auto;
+  margin-top: 30px;
+  width: 70%;
+  max-width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+}
+
+
+#passedStudentsTableContainer th, #passedStudentsTableContainer td 
+,#failedStudentsTableContainer th, #failedStudentsTableContainer td{
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+#passedStudentsTableContainer th, #failedStudentsTableContainer th  {
+  background-color: #f2f2f2;
+}
+
+
+#passedStudentsTableContainer tr:hover,#failedStudentsTableContainer tr:hover {
+  background-color: #b4afa9;
+}
+
+#passedStudentsTableContainer p,#failedStudentsTableContainer p{
+  width: 60%;
+  background-color: #4c4c49;
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  margin-left: 65px;
+  margin-top: 30px;
+}
+.passedFailedPage{
+  min-width: 500px;
+    width: 70%;
+    min-height: 650px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+  justify-content: center;
+}
+.resultTables hr{
+  margin-left: 50px;
+  width: 70%;
+  height: 5px;
+  border-top: 2px dashed #5a5848 ;
+}

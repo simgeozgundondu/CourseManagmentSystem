@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses List</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <nav class="navigation">
+        <div class="menuToggle"></div>
+        <ul>
+            <li class="list active" style="--c-nav: rgb(87, 93, 87); ">
+             <div class="profile">
+                <span class="icon"><ion-icon name="person-circle" style="color: #fff;"></ion-icon></span>
+                <span class="text">Welcome Sarah!</span>
+             </div>
+           
+
+            </li>
+            <li class="list active" style="--c-nav: #69b8f9;">
+                <a href="./index.html">
+                    <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                    <span class="text">Home</span>
+                </a>
+            </li>
+            <li class="list" style="--c-nav: #ffae34;">
+                <a href="./addCourse.html">
+                    <span class="icon"><ion-icon name="add-circle-outline"></ion-icon></span>
+                    <span class="text">Add Course</span>
+                </a>
+            </li>
+            <li class="list" style="--c-nav: #bf4af9;">
+                <a href="./addStudent.html">
+                    <span class="icon"><ion-icon name="person-add-outline"></ion-icon></span>
+                    <span class="text">Add Student</span>
+                </a>
+            </li>
+            <li class="list" style="--c-nav: rgb(246, 255, 0);">
+                <a href="./coursesSection.html">
+                    <span class="icon"><ion-icon name="book-outline"></ion-icon></span>
+                    <span class="text">Courses</span>
+                </a>
+            </li>
+            <li class="list" style="--c-nav: #08e508;">
+                <a href="./students.html">
+                    <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
+                    <span class="text">Students</span>
+                </a>
+            </li>
+            <li class="list" style="--c-nav: #f76dcd;">
+                <a href="./detail-course.html">
+                    <span class="icon"><ion-icon name="search-circle-outline"></ion-icon></span>
+                    <span class="text">Passed/Faied</span>
+                </a>
+            </li>
+            <li class="list active" style="--c-nav: rgb(255, 4, 4); ">
+                <div class="profile">
+                   <span class="icon"><ion-icon name="close-circle-outline" style="color: #fff;"></ion-icon></span>
+                   <span class="text">Exit!</span>
+                </div>
+
+
+        </ul>
+    </nav>
+    <div class="coursesList">
+        <input type="text" id="searchInput" placeholder="Search...">
+        
+        <div id="coursDetailForm" style="display:none;">
+            <form id="courseDetailForm">
+                <label for="courseName">Course Name:</label>
+                <input type="text" id="courseName" name="courseName" >
+    
+                <label for="courseCode">Course Code:</label>
+                <input type="text" id="courseCode" name="courseCode"  >
+    
+                <label for="credit">Credit:</label>
+                <input type="text" id="credit" name="credit" >
+    
+                <label for="gradingScale">Grading Scale:</label>
+                <input type="text" id="gradingScale" name="gradingScale" >
+    
+                <button  id="updateFormButton" type="submit">Update</button>
+            </form>
+        </div>
+    
+        <div id="coursesTableContainer">
+        </div>
+    </div>
+
+
+
+    <script src="./js/coursesSection.js" type="module"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+</body>
+</html>

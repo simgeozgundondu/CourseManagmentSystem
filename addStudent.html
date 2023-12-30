@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Student</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <nav class="navigation">
+        <div class="menuToggle"></div>
+        <ul>
+            <li class="list active" style="--c-nav: rgb(87, 93, 87); ">
+             <div class="profile">
+                <span class="icon"><ion-icon name="person-circle" style="color: #fff;"></ion-icon></span>
+                <span class="text">Welcome Sarah!</span>
+             </div>
+           
+
+            </li>
+            <li class="list active" style="--c-nav: #69b8f9;">
+                <a href="./index.html">
+                    <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                    <span class="text">Home</span>
+                </a>
+            </li>
+            <li class="list" style="--c-nav: #ffae34;">
+                <a href="./addCourse.html">
+                    <span class="icon"><ion-icon name="add-circle-outline"></ion-icon></span>
+                    <span class="text">Add Course</span>
+                </a>
+            </li>
+            <li class="list" style="--c-nav: #bf4af9;">
+                <a href="./addStudent.html">
+                    <span class="icon"><ion-icon name="person-add-outline"></ion-icon></span>
+                    <span class="text">Add Student</span>
+                </a>
+            </li>
+            <li class="list" style="--c-nav: rgb(246, 255, 0);">
+                <a href="./coursesSection.html">
+                    <span class="icon"><ion-icon name="book-outline"></ion-icon></span>
+                    <span class="text">Courses</span>
+                </a>
+            </li>
+            <li class="list" style="--c-nav: #08e508;">
+                <a href="./students.html">
+                    <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
+                    <span class="text">Students</span>
+                </a>
+            </li>
+            <li class="list" style="--c-nav: #f76dcd;">
+                <a href="./detail-course.html">
+                    <span class="icon"><ion-icon name="search-circle-outline"></ion-icon></span>
+                    <span class="text">Passed/Faied</span>
+                </a>
+            </li>
+            <li class="list active" style="--c-nav: rgb(255, 4, 4); ">
+                <div class="profile">
+                   <span class="icon"><ion-icon name="close-circle-outline" style="color: #fff;"></ion-icon></span>
+                   <span class="text">Exit!</span>
+                </div>
+
+
+        </ul>
+    </nav>
+    <div class="addCoursePage">
+        <form id="courseForm">
+            <!-- <label for="courseName">Choose course name:</label> -->
+            <select id="courseName" name="courseName" required>
+                <option value="" disabled selected>Please choose course name</option>
+            </select><br>
+            <label for="studentId">Student Id:</label>
+            <input type="text" id="studentId" name="studentId" required><br>
+
+            <label for="studentName">Student Name:</label>
+            <input type="text" id="studentName" name="studentName" required><br>
+
+            <label for="studentSurname">Student Surname:</label>
+            <input type="text" id="studentSurname" name="studentSurname" required><br>
+
+            <label for="midterm">Midterm :</label>
+            <input type="number" id="midterm" name="midterm" required><br>
+
+            <label for="final">Final :</label>
+            <input type="number" id="final" name="final" required><br>
+
+            <button id="submit">Add student</button>
+        </form>
+        <hr>
+
+    </div>
+
+
+
+
+
+    <script src="./js/addStudent.js" type="module"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+</body>
+
+</html>
