@@ -1,7 +1,7 @@
 # Student and Course Managment System
 
 
-GitHub Repository Link: https://github.com/simgeozgundondu/CourseManagmentSystem
+Evaluated environment url: https://simgeozgundondu.github.io/CourseManagmentSystem/
 
 This project includes a simple web application that manages student and course information.
 
