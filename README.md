@@ -2,6 +2,7 @@
 
 
 Evaluated environment url: https://simgeozgundondu.github.io/CourseManagmentSystem/
+Github repository link: https://github.com/simgeozgundondu/CourseManagmentSystem
 
 This project includes a simple web application that manages student and course information.
 
